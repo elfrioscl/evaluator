@@ -3,9 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba Adaptativa</title>
+    <title>Prueba Adaptativa Matrix</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #00ff00;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 90%;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            color: #00ff00;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #00ff00;
+        }
+        .question-card {
+            background-color: rgba(0, 255, 0, 0.1);
+            border: 1px solid #00ff00;
+            border-radius: 0;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+        }
+        .question-header {
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            color: #008000;
+        }
+        .question {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .option {
+            border: 1px solid #008000;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        .option:hover {
+            background-color: rgba(0, 255, 0, 0.2);
+        }
+        .option input[type="radio"] {
+            margin-right: 10px;
+        }
+        .next-question {
+            background-color: #008000;
+            color: #000;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-top: auto;
+            transition: all 0.3s;
+        }
+        .next-question:hover {
+            background-color: #00ff00;
+            box-shadow: 0 0 20px #00ff00;
+        }
+    </style>
 </head>
 <body>
-    <div id="root"></div>
+    <div class="container">
+        <div class="header">
+            <h1>Prueba Adaptativa</h1>
+        </div>
+        <div class="question-card">
+            <div class="question-header">
+                <span>Pregunta 1/30</span>
+            </div>
+            <div class="question">
+                ¿Para qué sirven las UTMs?
+            </div>
+            <ul class="options">
+                <li class="option">
+                    <input type="radio" name="answer" id="option1">
+                    <label for="option1">Para medir la temperatura</label>
+                </li>
+                <li class="option">
+                    <input type="radio" name="answer" id="option2">
+                    <label for="option2">Para rastrear campañas de marketing</label>
+                </li>
+                <li class="option">
+                    <input type="radio" name="answer" id="option3">
+                    <label for="option3">Para calcular distancias</label>
+                </li>
+                <li class="option">
+                    <input type="radio" name="answer" id="option4">
+                    <label for="option4">Para analizar datos financieros</label>
+                </li>
+            </ul>
+        </div>
+        <button class="next-question">Siguiente Pregunta</button>
+    </div>
 </body>
 </html>
